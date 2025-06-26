@@ -27,15 +27,17 @@ public class GestorComandos {
             case "4":
                 comando = new EliminarTareaComando(tareas, scanner);
                 break;
+            
             case "5":
-                System.out.println("Saliendo del sistema...");
-                return;
-            case "6":
                 comando = new ExportarTareasComando(tareas);
                 break;
-            case "7":
+            case "6":
                 comando = new ClonarTareaComando(tareas, scanner);
                 break;
+                
+            case "7":
+                System.out.println("Saliendo del sistema...");
+                return;
             default:
                 System.out.println("Opción inválida.");
                 return;

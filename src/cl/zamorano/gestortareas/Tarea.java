@@ -27,6 +27,10 @@ public class Tarea implements Cloneable {
         this.completada = true;
     }
 
+    public void marcarComoIncompleta() {
+        this.completada = false;
+    }
+
     @Override
     public Tarea clone() {
         try {

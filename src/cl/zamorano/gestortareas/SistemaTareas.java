@@ -36,10 +36,11 @@ public class SistemaTareas {
         System.out.println("2. Listar tareas");
         System.out.println("3. Completar tarea");
         System.out.println("4. Eliminar tarea");
-        System.out.println("5. Clonar tarea");
-        System.out.println("6. Exportar tareas a CSV");
+        System.out.println("5. Exportar tareas a CSV");
+        System.out.println("6. Clonar tarea");
         System.out.println("7. Salir");
         System.out.print("Seleccione una opción: ");
     }
+
 
 }

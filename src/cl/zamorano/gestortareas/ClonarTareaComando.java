@@ -29,7 +29,11 @@ public class ClonarTareaComando implements Comando {
             int opcion = Integer.parseInt(scanner.nextLine());
             if (opcion >= 1 && opcion <= tareas.size()) {
                 Tarea original = tareas.get(opcion - 1);
-                Tarea clon = original.clone(); // ← Aquí aplicamos el Prototype
+                Tarea clon = original.clone();
+
+                // ¡Esto es lo importante! El clon comienza como no completado
+                clon.marcarComoIncompleta();
+
                 tareas.add(clon);
                 System.out.println("🌀 Tarea clonada con éxito.");
             } else {
@@ -37,6 +41,8 @@ public class ClonarTareaComando implements Comando {
             }
         } catch (NumberFormatException e) {
             System.out.println("❌ Entrada inválida.");
+        } catch (RuntimeException e) {
+            System.out.println("❌ Error al clonar la tarea: " + e.getMessage());
         }
     }
 }
